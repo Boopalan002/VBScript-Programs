@@ -1,0 +1,28 @@
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<html>
+<head>
+	<title>VBScript Programs</title>
+</head>
+<body>
+	<form name="frm">
+		Enter the 1st Number:<input type="text" name="text1">
+		Enter the 2nd Number:<input type="text" name="text2">
+		Result will display here: <input type="text" name="result">
+		<input type="button" name="btn" value="SUBMIT">
+	</form>
+<script type="text/vbscript" language="vbscript">
+	Sub btn_onclick()
+		Dim a, b, c
+		a = document.frm.text1.value
+		b = document.frm.text2.value
+		If (IsNumeric(a) And IsNumeric(b)) Then
+			c = a + b
+			document.frm.result.value = c
+		Else
+			msgbox "Type only number to proceed"
+		End If
+		
+	End Sub
+</script>
+</body>
+</html>
